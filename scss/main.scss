@@ -398,4 +398,83 @@ a {
 
 .cooperation {
     padding-top: 30px;
+    padding-bottom: 25px;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+            float: left;
+            width: 33.33%;
+            color: #452a22;
+            font-size: 18px;
+            line-height: 25px;
+            text-align: center;
+            position: relative;
+            padding: 140px 10px 0 10px;
+
+            &:after {
+                top: 0;
+                right: -40px;
+                width: 113px;
+                height: 34px;
+                content: " ";
+                position: absolute;
+                background: url("../img/sprite.png") -235px -251px no-repeat;
+            }
+
+            &:before {
+                top: 55px;
+                left: 50%;
+                content: " ";
+                position: absolute;
+                background: url("../img/sprite.png") no-repeat;
+            }
+
+            &.item1:before {
+                width: 72px;
+                height: 70px;
+                margin-left: -36px;
+                background-position: 0 -251px;
+            }
+
+            &.item2:before {
+                width: 84px;
+                height: 70px;
+                margin-left: -42px;
+                background-position: -72px -251px;
+            }
+
+            &.item3 {
+
+                &:before {
+                    width: 79px;
+                    height: 70px;
+                    margin-left: -40px;
+                    background-position: -156px -251px;
+                }
+
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
 }
+
+.order {
+
+    .form-order-title {
+        color: #452a22;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 40px;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+    }
+}
+
+
+

@@ -187,14 +187,79 @@
         <article class="cooperation">
             <div class="container">
                 <h2>как начать сотрудничество</h2>
+                <ul class="clearfix">
+                    <li class="item1">Вы звоните нам по телефону 8 (964) 586-20-20. Рассазываете нам свои пожелания и идеи</li>
+                    <li class="item2">Мы формируем  основную концепцию будуюшего сценария. Рисуем эскизы будующего сюжеты.</li>
+                    <li class="item3">После утвержления эскизов мы начинаем подготовку к выступлению или съемкам видеоролика.</li>
+                </ul>
             </div>
         </article>
 
-        <section class="main">
+        <article class="order">
             <div class="container">
-
+                <h2>Заказать песочное шоу</h2>
+                <div class="form-order-title">По готовому сценарию</div>
+                <div class="form-order">
+                    <form class="form">
+                        <ul class="form-row clearfix">
+                            <li>
+                                <input id="check11" type="checkbox" name="check" value="На свадьбу">
+                                <label for="check11"  class="form-order-label">На свадьбу</label>
+                            </li>
+                            <li>
+                                <input id="check12" type="checkbox" name="check" value="На юбилей">
+                                <label for="check12"  class="form-order-label">На юбилей</label>
+                            </li>
+                            <li>
+                                <input id="check13" type="checkbox" name="check" value="На корпоратив">
+                                <label for="check13" class="form-order-label">На корпоратив</label>
+                            </li>
+                            <li>
+                                <input id="check14" type="checkbox" name="check" value="На детский праздник">
+                                <label for="check14" class="form-order-label">На детский праздник</label>
+                            </li>
+                            <li>
+                                <input id="check15" type="checkbox" name="check" value="На концерт">
+                                <label for="check15" class="form-order-label">На концерт</label>
+                            </li>
+                        </ul>
+                        <div class="text-center">
+                            <button type="submit" class="btn-form-order">Заказать шоу</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="form-order-title">По индивидуальному сценарию</div>
+                <div class="form-order">
+                    <form class="form">
+                        <ul class="form-row clearfix">
+                            <li>
+                                <input id="check21" type="checkbox" name="check" value="На свадьбу">
+                                <label for="check21"  class="form-order-label">На свадьбу</label>
+                            </li>
+                            <li>
+                                <input id="check22" type="checkbox" name="check" value="На юбилей">
+                                <label for="check22"  class="form-order-label">На юбилей</label>
+                            </li>
+                            <li>
+                                <input id="check23" type="checkbox" name="check" value="На корпоратив">
+                                <label for="check23" class="form-order-label">На корпоратив</label>
+                            </li>
+                            <li>
+                                <input id="check24" type="checkbox" name="check" value="На детский праздник">
+                                <label for="check24" class="form-order-label">На детский праздник</label>
+                            </li>
+                            <li>
+                                <input id="check25" type="checkbox" name="check" value="На концерт">
+                                <label for="check25" class="form-order-label">На концерт</label>
+                            </li>
+                        </ul>
+                        <div class="text-center">
+                            <button type="submit" class="btn-form-order">Заказать шоу</button>
+                        </div>
+                    </form>
+                </div>
             </div>
-        </section>
+        </article>
 
         <?php include('includes/footer.php') ?>
     </body>
