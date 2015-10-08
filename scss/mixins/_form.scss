@@ -1,0 +1,47 @@
+@mixin form-control($padding: $input-padding, $font-size: $font-size-base, $line-height: $line-height-base, $color: $input-color, $bg: $input-bg, $border: $input-border, $border-focus: $input-border-focus) {
+    width: 100%;
+    display: block;
+    padding: $padding;
+    font-size: $font-size;
+    line-height: $line-height;
+    color: $color;
+    text-align: center;
+    text-decoration: none;
+    background-color: $bg;
+    background-image: none;
+    border: 1px solid $border;
+    @include border-radius(3px);
+    @include box-shadow(inset 0 1px 1px rgba(0, 0, 0, .075));
+    @include transition(border-color ease-in-out .15s, box-shadow ease-in-out .15s);
+
+    &:focus,
+    &:hover {
+        outline: 0;
+        border-color: $input-border-focus;
+    }
+
+    &:active {
+        top: 1px;
+        position: relative;
+    }
+}
+
+@mixin input-size($parent, $input-height, $padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius) {
+    #{$parent} {
+        height: $input-height;
+        padding: $padding-vertical $padding-horizontal;
+        font-size: $font-size;
+        line-height: $line-height;
+        border-radius: $border-radius;
+    }
+
+    select#{$parent} {
+        height: $input-height;
+        line-height: $input-height;
+    }
+
+    textarea#{$parent},
+    select[multiple]#{$parent} {
+        height: auto;
+    }
+}

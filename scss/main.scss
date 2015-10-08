@@ -1,0 +1,401 @@
+@import url(https://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic);
+
+@font-face {
+    font-family:'NeoSansPro';
+    src: url('../fonts/NeoSansPro-Light/NeoSansPro-Light_gdi.eot');
+    src: url('../fonts/NeoSansPro-Light/NeoSansPro-Light_gdi.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/NeoSansPro-Light/NeoSansPro-Light_gdi.woff') format('woff'),
+    url('../fonts/NeoSansPro-Light/NeoSansPro-Light_gdi.ttf') format('truetype'),
+    url('../fonts/NeoSansPro-Light/NeoSansPro-Light_gdi.svg#NeoSansPro-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-25CA;
+}
+
+@font-face {
+    font-family:'NeoSansPro';
+    src: url('../fonts/NeoSansPro-Regular/NeoSansPro-Regular.eot');
+    src: url('../fonts/NeoSansPro-Regular/NeoSansPro-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/NeoSansPro-Regular/NeoSansPro-Regular.woff') format('woff'),
+    url('../fonts/NeoSansPro-Regular/NeoSansPro-Regular.ttf') format('truetype'),
+    url('../fonts/NeoSansPro-Regular/NeoSansPro-Regular.svg#NeoSansPro-Regular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-25CA;
+}
+
+@font-face {
+    font-family:'NeoSansPro';
+    src: url('../fonts/NeoSansPro-Medium/NeoSansPro-Medium.eot');
+    src: url('../fonts/NeoSansPro-Medium/NeoSansPro-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/NeoSansPro-Medium/NeoSansPro-Medium.woff') format('woff'),
+    url('../fonts/NeoSansPro-Medium/NeoSansPro-Medium.ttf') format('truetype'),
+    url('../fonts/NeoSansPro-Medium/NeoSansPro-Medium.svg#NeoSansPro-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-25CA;
+}
+
+$font-lobster: 'Lobster', cursive;
+$font-neo : 'NeoSansPro';
+
+// Variables
+@import "variables";
+
+
+// Mixins
+@import "mixins/grid-framework";
+@import "mixins/grid";
+@import "mixins/clearfix";
+@import "mixins/responsive-visibility";
+
+
+@import "mixins/gradients";
+@import "mixins/image";
+@import "mixins/opacity";
+@import "mixins/tab-focus";
+@import "mixins/vendor-prefixes";
+@import "mixins/center-block";
+
+@import "mixins/form";
+@import "mixins/buttons";
+
+
+// Reset and dependencies
+@import "components/normalize";
+@import "components/print";
+
+// Core CSS
+// @import "components/grid";
+@import "components/forms";
+@import "components/buttons";
+
+// Components
+@import "components/responsive-embed";
+// @import "components/responsive-utilities";
+
+// Utilities
+@import "components/utilities";
+
+
+// Pages
+@import "header";
+@import "footer";
+
+
+/* Base styles
+   ========================= */
+
+* {
+    @include box-sizing(border-box);
+}
+*:before,
+*:after {
+    @include box-sizing(border-box);
+}
+
+
+// Body reset
+
+html {
+    font-size: 10px;
+    min-height: 100%;
+    position: relative;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+
+}
+
+body {
+    padding-bottom: 225px;
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    color: $text-color;
+    background-color: $body-bg;
+    font-weight: 300;
+}
+
+.container {
+    width: 1080px;
+    padding-left: 40px;
+    padding-right: 40px;
+    position: relative;
+    @include clearfix;
+    @include center-block;
+}
+
+
+// Reset fonts for relevant elements
+input,
+button,
+select,
+textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+
+h1, h2, h3, h4 {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+}
+
+h2 {
+    color: #fca117;
+    font-size: 38px;
+    line-height: 40px;
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+strong {
+    font-weight: 500;
+}
+
+p {
+    margin: 0;
+    padding: 0 0 20px 0;
+}
+
+// Links
+
+a {
+    color: $link-color;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+        color: $link-hover-color;
+        text-decoration: $link-hover-decoration;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+[role="button"] {
+    cursor: pointer;
+}
+
+
+.show-type {
+    padding-bottom: 32px;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    li {
+        float: left;
+        width: 20%;
+        color: #452a22;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 30px;
+        text-align: center;
+        position: relative;
+        text-transform: uppercase;
+        padding: 83px 10px 0 10px;
+
+        &:before {
+            top: 0;
+            left: 50%;
+            content: " ";
+            position: absolute;
+            background: url("../img/sprite.png") no-repeat;
+        }
+
+        &.item1:before {
+            width: 95px;
+            height: 71px;
+            margin-left: -48px;
+            background-position: 0 -110px;
+        }
+
+        &.item2:before {
+            width: 53px;
+            height: 69px;
+            margin-left: -27px;
+            background-position: -95px -110px;
+        }
+
+        &.item3:before {
+            width: 69px;
+            height: 72px;
+            margin-left: -35px;
+            background-position: -148px -110px;
+        }
+
+        &.item4:before {
+            width: 57px;
+            height: 70px;
+            margin-left: -28px;
+            background-position: -217px -110px;
+        }
+
+        &.item5:before {
+            width: 83px;
+            height: 70px;
+            margin-left: -28px;
+            background-position: -316px -110px;
+        }
+    }
+}
+
+.what {
+    height: 550px;
+    padding: 25px 0;
+    line-height: 25px;
+    background: url("../img/what_bg.jpg") top center no-repeat;
+
+    h2 {
+        margin-bottom: 25px;
+    }
+}
+
+.gallery {
+    height: 497px;
+    background: url("../img/gallery_bg.jpg")center bottom no-repeat;
+
+    .gallery__tab {
+        padding-top: 45px;
+
+        ul {
+            padding: 0;
+            height: 44px;
+            list-style: none;
+            margin: 0 0 40px 0;
+
+            li {
+                float: right;
+                width: 187px;
+                height: 44px;
+                font-size: 24px;
+                font-weight: 400;
+                line-height: 24px;
+                text-align: center;
+                position: relative;
+
+                a {
+                    padding: 10px;
+                    height: 44px;
+                    color: #452a22;
+                    display: block;
+                    position: relative;
+                    text-decoration: none;
+                    background: url("../img/sprite.png") 0 -190px no-repeat;
+                }
+
+                &.ui-state-active {
+
+                    a {
+                        top: -15px;
+                        left: -10px;
+                        right: -10px;
+                        bottom: -2px;
+                        width: 207px;
+                        height: 61px;
+                        padding-top: 25px;
+                        background-position: -187px -190px;
+                    }
+                }
+            }
+        }
+
+        .gallery__tab-item {
+            height: 350px;
+            position: relative;
+        }
+    }
+
+    .gallery__slider {
+        width: 1000px;
+        margin: 0;
+
+        .slider-item {
+            float: left;
+            width: 320px;
+            color: #50362f;
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 30px;
+            text-align: center;
+
+            .slider-item__image {
+                margin-bottom: 15px;
+                border: 3px solid #452a22;
+                @include box-shadow(0px 2px 8px 0px rgba(50, 50, 50, 0.75));
+            }
+        }
+    }
+
+    .owl-controls {
+        top: 0;
+        width: 100%;
+        position: absolute;
+
+        .owl-nav {
+            z-index: 100;
+            position: relative;
+        }
+
+        .owl-prev {
+            top: 130px;
+            left: -35px;
+            width: 19px;
+            height: 33px;
+            z-index: 100;
+            cursor: pointer;
+            position: absolute;
+            background: url("../img/sprite.png") -316px 0 no-repeat;
+
+            border: 0;
+            overflow: hidden;
+            /* IE 6/7 fallback */
+            *text-indent: -9999px;
+
+            &:before {
+                content: "";
+                display: block;
+                width: 0;
+                height: 150%;
+            }
+        }
+
+        .owl-next {
+            top: 130px;
+            right: -35px;
+            width: 19px;
+            height: 33px;
+            z-index: 100;
+            cursor: pointer;
+            position: absolute;
+            background: url("../img/sprite.png") -336px 0 no-repeat;
+
+            border: 0;
+            overflow: hidden;
+            /* IE 6/7 fallback */
+            *text-indent: -9999px;
+
+            &:before {
+                content: "";
+                display: block;
+                width: 0;
+                height: 150%;
+            }
+        }
+    }
+}
+
+.cooperation {
+    padding-top: 30px;
+}

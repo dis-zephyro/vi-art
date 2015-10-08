@@ -1,0 +1,181 @@
+//
+// Forms
+// --------------------------------------------------
+
+
+// Common form controls
+
+.form-control {
+    width: 100%;
+    display: block;
+    padding: 9px 20px;
+    font-size: 16px;
+    line-height: 20px;
+    color: #452a22;
+    text-align: center;
+    text-decoration: none;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #4e352d;
+
+    &:focus,
+    &:hover {
+        outline: 0;
+        border-color: #000;
+    }
+
+    &:focus {
+        @include box-shadow(inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(red(#ddd), green(#ddd), blue(#ddd), .6));
+    }
+
+    // Placeholder
+    @include placeholder(#999999);
+
+}
+
+textarea.form-control {
+    height: auto;
+}
+
+
+.form__large {
+    margin-top: 15px;
+    border: 3px solid #452a22;
+    padding: 25px 15px 30px 15px;
+
+    .form-title {
+        color: #fca117;
+        font-size: 30px;
+        font-weight: 400;
+        line-height: 32px;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    li {
+        width: 25%;
+        float: left;
+        padding: 0 15px;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
+
+
+// Form groups
+
+.form-group {
+    margin-bottom: $form-group-margin-bottom;
+}
+
+
+
+fieldset {
+      padding: 0;
+      margin: 0;
+      border: 0;
+      min-width: 0;
+}
+
+label {
+      display: inline-block;
+      max-width: 100%;
+      margin-bottom: 5px;
+      font-weight: bold;
+}
+
+
+input[type="search"] {
+      @include box-sizing(border-box);
+}
+
+// Position radios and checkboxes better
+input[type="radio"],
+input[type="checkbox"] {
+      margin: 4px 0 0;
+      margin-top: 1px \9; // IE8-9
+      line-height: normal;
+}
+
+input[type="file"] {
+      display: block;
+}
+
+// Make range inputs behave like textual form controls
+input[type="range"] {
+      display: block;
+      width: 100%;
+}
+
+// Make multiple select elements height not fixed
+select[multiple],
+select[size] {
+      height: auto;
+}
+
+// Focus for file, radio, and checkbox
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+      @include tab-focus;
+}
+
+// Checkboxes and radios
+//
+// Indent the labels to position radios/checkboxes as hanging controls.
+
+.radio,
+.checkbox {
+    position: relative;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+  label {
+      min-height: $line-height-computed; // Ensure the input doesn't jump when there is no text
+      padding-left: 20px;
+      margin-bottom: 0;
+      font-weight: normal;
+      cursor: pointer;
+  }
+}
+.radio input[type="radio"],
+.radio-inline input[type="radio"],
+.checkbox input[type="checkbox"],
+.checkbox-inline input[type="checkbox"] {
+    position: absolute;
+    margin-left: -20px;
+    margin-top: 4px \9;
+}
+
+.radio + .radio,
+.checkbox + .checkbox {
+    margin-top: -5px; // Move up sibling radios or checkboxes for tighter spacing
+}
+
+// Radios and checkboxes on same line
+.radio-inline,
+.checkbox-inline {
+    position: relative;
+    display: inline-block;
+    padding-left: 20px;
+    margin-bottom: 0;
+    vertical-align: middle;
+    font-weight: normal;
+    cursor: pointer;
+}
+.radio-inline + .radio-inline,
+.checkbox-inline + .checkbox-inline {
+    margin-top: 0;
+    margin-left: 10px; // space out consecutive inline controls
+}
+
