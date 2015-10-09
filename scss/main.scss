@@ -263,8 +263,83 @@ a {
 }
 
 .gallery {
+    padding-top: 45px;
+
+    &.gallery__kids {
+        height: 680px;
+        background: url("../img/gallery_kids_bg.jpg") center bottom no-repeat;
+    }
+
+    .gallery-name {
+        top: -15px;
+        right: 40px;
+        width: 207px;
+        height: 61px;
+        display: block;
+        color: #452a22;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 24px;
+        position: absolute;
+        padding-top: 25px;
+        text-align: center;
+        background: url("../img/sprite.png") -187px -190px no-repeat;
+    }
+
+    ul {
+        padding: 85px 0 0 0;
+        margin: 0 -10px;
+        list-style: none;
+
+        li {
+            float: left;
+            width: 340px;
+            padding: 0 10px;
+        }
+    }
+
+    .gallery__video {
+        margin-bottom: 15px;
+        border: 3px solid #452a22;
+        @include box-shadow(0px 2px 8px 0px rgba(50, 50, 50, 0.75));
+    }
+
+    .gallery__title {
+        color: #50362f;
+        display: block;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 30px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .gallery__text {
+        height: 280px;
+        padding: 20px;
+        color: #50362f;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 23px;
+        background: rgba(255, 255, 255, 0.8);
+
+        span {
+            display: block;
+            font-weight: 400;
+            text-align: center;
+        }
+    }
+}
+
+
+.gallery__carousel {
     height: 497px;
     background: url("../img/gallery_bg.jpg")center bottom no-repeat;
+
+    .gallery__tab-item {
+        height: 350px;
+        position: relative;
+    }
 
     .gallery__tab {
         padding-top: 45px;
@@ -309,11 +384,6 @@ a {
                     }
                 }
             }
-        }
-
-        .gallery__tab-item {
-            height: 350px;
-            position: relative;
         }
     }
 
@@ -473,6 +543,92 @@ a {
         line-height: 40px;
         margin-bottom: 10px;
         text-transform: uppercase;
+    }
+}
+
+.content {
+    padding-bottom: 35px;
+}
+
+.kids_order {
+    padding: 25px 0 30px 0;
+}
+
+.service {
+    height: 707px;
+    color: #452a22;
+    padding-top: 25px;
+    padding-bottom: 30px;
+    background: url("../img/service_bg.jpg") top center no-repeat;
+
+    .service__kids {
+        margin: 0 -10px;
+        padding: 0;
+        list-style: none;
+
+        > li {
+            float: left;
+            width: 33.33%;
+            position: relative;
+            padding: 80px 10px 0 10px;
+
+            &:before {
+                top: 0;
+                left: 50%;
+                content: " ";
+                position: absolute;
+                background: url("../img/sprite.png") no-repeat;
+            }
+
+            span {
+                height: 60px;
+                color: #452a22;
+                display: block;
+                font-size: 24px;
+                font-weight: 400;
+                line-height: 30px;
+                text-align: center;
+                margin-bottom: 15px;
+            }
+
+            &.item1 {
+                &:before {
+                    width: 82px;
+                    height: 70px;
+                    margin-left: -41px;
+                    background-position: 0 -330px;
+                }
+            }
+
+            &.item2 {
+                &:before {
+                    width: 67px;
+                    height: 71px;
+                    margin-left: -44px;
+                    background-position: -82px -330px;
+                }
+            }
+
+            &.item3 {
+                &:before {
+                    width: 70px;
+                    height: 70px;
+                    margin-left: -35px;
+                    background-position: -148px -330px;
+                }
+            }
+        }
+
+        ol {
+            padding: 0 0 0 20px;
+            margin-bottom: 25px;
+
+            li {
+                font-size: 17px;
+                font-weight: 300;
+                line-height: 23px;
+            }
+        }
     }
 }
 

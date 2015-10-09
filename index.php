@@ -52,7 +52,7 @@
             </div>
         </article>
 
-        <article class="gallery">
+        <article class="gallery__carousel">
             <div class="container">
                 <div class="gallery__tab">
                     <ul class="clearfix">
