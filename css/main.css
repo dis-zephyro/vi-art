@@ -294,9 +294,11 @@ th {
     color: #999999; }
   .form-control::-webkit-input-placeholder {
     color: #999999; }
+  .form-control.error {
+    border-color: #fc3339; }
 
 textarea.form-control {
-  height: auto; }
+  height: 100px; }
 
 .form__large {
   margin-top: 15px;
@@ -384,7 +386,7 @@ textarea.form-control {
       background-position: 0 0; }
 
 .form-group {
-  margin-bottom: 15px; }
+  margin-bottom: 20px; }
 
 fieldset {
   padding: 0;
@@ -737,7 +739,7 @@ input[type="checkbox"]:focus {
   color: #452a22;
   font-weight: 400;
   position: absolute;
-  background: #fff url("../img/footer_bg.png") bottom center no-repeat; }
+  background: url("../img/footer_bg.png") bottom center no-repeat; }
   .footer .container {
     height: 100%; }
   .footer .footer__copy {
@@ -789,6 +791,8 @@ body {
   color: #252525;
   background-color: #fff;
   font-weight: 300; }
+  body.postcard {
+    background: #fff url("../img/bg_auto.jpg") bottom center no-repeat; }
 
 .container {
   width: 1080px;
@@ -841,8 +845,17 @@ a {
   a:focus {
     outline: none; }
 
-[role="button"] {
-  cursor: pointer; }
+.rows {
+  margin: 0 -10px; }
+  .rows:before, .rows:after {
+    content: " ";
+    display: table; }
+  .rows:after {
+    clear: both; }
+  .rows .col {
+    width: 50%;
+    float: left;
+    padding: 0 10px; }
 
 .show-type {
   padding-bottom: 32px; }
@@ -906,6 +919,12 @@ a {
   .gallery.gallery__kids {
     height: 680px;
     background: url("../img/gallery_kids_bg.jpg") center bottom no-repeat; }
+    .gallery.gallery__kids .gallery__title {
+      color: #ffe6bd; }
+  .gallery.gallery__postcard {
+    height: auto;
+    min-height: 695px;
+    background: url("../img/postcard_bg.jpg") 50% 45px no-repeat; }
   .gallery .gallery-name {
     top: -15px;
     right: 40px;
@@ -940,7 +959,8 @@ a {
     font-weight: 400;
     line-height: 30px;
     text-align: center;
-    margin-bottom: 10px; }
+    margin-bottom: 10px;
+    text-transform: uppercase; }
   .gallery .gallery__text {
     height: 280px;
     padding: 20px;
@@ -1167,5 +1187,26 @@ a {
         font-size: 17px;
         font-weight: 300;
         line-height: 23px; }
+
+.application {
+  height: 340px;
+  padding-top: 30px;
+  background: url("../img/application_bg.jpg") top center no-repeat; }
+  .application .application__form {
+    width: 490px;
+    float: right;
+    padding: 15px 16px 0 16px;
+    border: 3px solid #452a22; }
+    .application .application__form .form-title {
+      color: #fca117;
+      font-size: 30px;
+      font-weight: 400;
+      line-height: 35px;
+      text-align: center;
+      margin-bottom: 10px; }
+    .application .application__form .form-control {
+      text-align: left; }
+  .application .btn {
+    width: 100%; }
 
 /*# sourceMappingURL=main.css.map */

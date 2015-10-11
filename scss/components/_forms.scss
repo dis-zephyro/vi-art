@@ -31,10 +31,13 @@
     // Placeholder
     @include placeholder(#999999);
 
+    &.error {
+        border-color: #fc3339;
+    }
 }
 
 textarea.form-control {
-    height: auto;
+    height: 100px;
 }
 
 
@@ -155,7 +158,7 @@ textarea.form-control {
 // Form groups
 
 .form-group {
-    margin-bottom: $form-group-margin-bottom;
+    margin-bottom: 20px;
 }
 
 

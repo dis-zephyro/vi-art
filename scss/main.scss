@@ -116,6 +116,10 @@ body {
     color: $text-color;
     background-color: $body-bg;
     font-weight: 300;
+
+    &.postcard {
+        background: #fff url("../img/bg_auto.jpg") bottom center no-repeat;
+    }
 }
 
 .container {
@@ -158,6 +162,7 @@ strong {
     font-weight: 500;
 }
 
+
 p {
     margin: 0;
     padding: 0 0 20px 0;
@@ -180,10 +185,16 @@ a {
     }
 }
 
-[role="button"] {
-    cursor: pointer;
-}
+.rows {
+    margin: 0 -10px;
+    @include clearfix();
 
+    .col {
+        width: 50%;
+        float: left;
+        padding: 0 10px ;
+    }
+}
 
 .show-type {
     padding-bottom: 32px;
@@ -268,6 +279,17 @@ a {
     &.gallery__kids {
         height: 680px;
         background: url("../img/gallery_kids_bg.jpg") center bottom no-repeat;
+
+        .gallery__title {
+            color: #ffe6bd;
+        }
+    }
+
+
+    &.gallery__postcard {
+        height: auto;
+        min-height: 695px;
+        background: url("../img/postcard_bg.jpg") 50% 45px no-repeat;
     }
 
     .gallery-name {
@@ -312,6 +334,7 @@ a {
         line-height: 30px;
         text-align: center;
         margin-bottom: 10px;
+        text-transform: uppercase;
     }
 
     .gallery__text {
@@ -330,7 +353,6 @@ a {
         }
     }
 }
-
 
 .gallery__carousel {
     height: 497px;
@@ -631,6 +653,38 @@ a {
         }
     }
 }
+
+.application {
+    height: 340px;
+    padding-top: 30px;
+    background: url("../img/application_bg.jpg") top center no-repeat;
+
+    .application__form {
+        width: 490px;
+        float: right;
+        padding: 15px 16px 0 16px;
+        border: 3px solid #452a22;
+
+        .form-title {
+            color: #fca117;
+            font-size: 30px;
+            font-weight: 400;
+            line-height: 35px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .form-control {
+            text-align: left;
+        }
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
+
+
 
 
 
